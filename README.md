@@ -1,4 +1,4 @@
-# 🧑‍🤝Red Social Full Stack - Periferia
+# Red Social Full Stack - Periferia
 
 Este proyecto es una red social básica desarrollada como parte de una prueba técnica. Permite a los usuarios autenticarse, crear publicaciones y dar likes, todo bajo una arquitectura moderna basada en microservicios y contenedores.
 
@@ -12,6 +12,7 @@ Este proyecto es una red social básica desarrollada como parte de una prueba t�
 - **Documentación:** Swagger
 - **Orquestación:** Docker & Docker Compose
 - **Logger:** Personalizado con formato estructurado
+- **Testing:** Jest + Supertest
 
 ## Estructura del Proyecto
 
@@ -20,6 +21,7 @@ Este proyecto es una red social básica desarrollada como parte de una prueba t�
 ├── backend
 │   ├── src
 │   ├── prisma
+│   ├── test
 │   ├── .env
 │   └── Dockerfile
 ├── frontend
@@ -74,6 +76,15 @@ Este proyecto es una red social básica desarrollada como parte de una prueba t�
    # Terminal 2
    cd frontend && npm start
    ```
+## Ejecutar Pruebas
+
+Desde la carpeta `backend`:
+
+```bash
+npx jest
+```
+
+Las pruebas se encuentran en la carpeta `/test` e incluyen autenticación, publicaciones.
 
 ## Uso con Docker
 
@@ -102,6 +113,11 @@ docker compose down -v --remove-orphans
   "password": "123456"
 }
 ```
+
+Servicios expuestos:
+- Frontend: http://localhost:3000
+- Backend: http://localhost:4000
+- Swagger API: http://localhost:4000/api/docs
 
 ## Endpoints principales
 
