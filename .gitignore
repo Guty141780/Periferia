@@ -1,0 +1,17 @@
+# Logs y sistemas temporales
+*.log
+.env
+.env.* 
+node_modules/
+dist/
+build/
+
+# Docker
+postgres-data/
+
+# Editor
+.vscode/
+.DS_Store
+
+# Prisma
+*.db
